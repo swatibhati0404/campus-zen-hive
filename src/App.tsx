@@ -7,6 +7,10 @@ import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
 import Chat from "./pages/Chat";
 import Resources from "./pages/Resources";
+import Wellness from "./pages/Wellness";
+import Counseling from "./pages/Counseling";
+import VRRelaxation from "./pages/VRRelaxation";
+import Forum from "./pages/Forum";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,9 +27,10 @@ const App = () => (
             <Route path="/" element={<LandingPage />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/resources" element={<Resources />} />
-            <Route path="/wellness" element={<div className="flex items-center justify-center h-96"><p className="text-muted-foreground">Wellness Dashboard - Coming Soon</p></div>} />
-            <Route path="/counseling" element={<div className="flex items-center justify-center h-96"><p className="text-muted-foreground">Counseling Booking - Coming Soon</p></div>} />
-            <Route path="/forum" element={<div className="flex items-center justify-center h-96"><p className="text-muted-foreground">Peer Support Forum - Coming Soon</p></div>} />
+            <Route path="/wellness" element={<Wellness />} />
+            <Route path="/counseling" element={<Counseling />} />
+            <Route path="/forum" element={<Forum />} />
+            <Route path="/vr-relaxation" element={<VRRelaxation />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

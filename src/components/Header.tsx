@@ -24,12 +24,13 @@ const Header = () => {
     { name: 'Wellness', href: '/wellness', icon: Trophy },
     { name: 'Counseling', href: '/counseling', icon: Calendar },
     { name: 'Forum', href: '/forum', icon: MessageCircle },
+    { name: 'VR Relax', href: '/vr-relaxation', icon: BarChart3 },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="flex items-center justify-between h-16 md:h-20 overflow-hidden">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="flex items-center justify-center w-10 h-10 bg-gradient-hero rounded-xl shadow-md">
@@ -42,7 +43,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.href;
@@ -64,7 +65,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3">
             <Button variant="outline" size="sm">
               Sign In
             </Button>
@@ -77,7 +78,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -86,7 +87,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background">
+          <div className="lg:hidden py-4 border-t border-border bg-background">
             <nav className="flex flex-col space-y-2">
               {navigation.map((item) => {
                 const Icon = item.icon;
