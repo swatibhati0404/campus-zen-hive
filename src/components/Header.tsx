@@ -25,6 +25,7 @@ const Header = () => {
     { name: 'Counseling', href: '/counseling', icon: Calendar },
     { name: 'Forum', href: '/forum', icon: MessageCircle },
     { name: 'VR Relax', href: '/vr-relaxation', icon: BarChart3 },
+    { name: 'Admin', href: '/admin', icon: BarChart3 },
   ];
 
   return (

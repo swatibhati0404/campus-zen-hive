@@ -11,6 +11,7 @@ import Wellness from "./pages/Wellness";
 import Counseling from "./pages/Counseling";
 import VRRelaxation from "./pages/VRRelaxation";
 import Forum from "./pages/Forum";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/counseling" element={<Counseling />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/vr-relaxation" element={<VRRelaxation />} />
+            <Route path="/admin" element={<AdminDashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

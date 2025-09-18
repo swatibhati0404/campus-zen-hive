@@ -70,8 +70,8 @@ const LandingPage = () => {
       title: "VR Relaxation Spaces",
       description: "Immersive virtual environments for meditation, stress relief, and mindfulness practices. Experience calm anywhere, anytime.",
       icon: Globe,
-      buttonText: "Coming Soon",
-      comingSoon: true
+      buttonText: "Enter VR Space",
+      onButtonClick: () => window.location.href = '/vr-relaxation'
     }
   ];
 
@@ -100,7 +100,7 @@ const LandingPage = () => {
           <img 
             src={heroImage} 
             alt="Students supporting each other"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover blur-sm"
           />
         </div>
         <div className="relative container mx-auto px-4 py-20 md:py-32">
@@ -185,7 +185,6 @@ const LandingPage = () => {
                 buttonText={feature.buttonText}
                 onButtonClick={feature.onButtonClick}
                 variant={feature.variant}
-                comingSoon={feature.comingSoon}
               />
             ))}
           </div>
